@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Pesan vila di kawasan Puncak, Bogor.">
+  <title>Vila Permai - Pemesanan Vila Puncak</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <h1 class="site-header__title">Vila Permai</h1>
+
+      <nav class="site-nav" aria-label="Navigasi utama">
+        <a class="site-nav__link" href="#daftar-vila">Pilihan Vila</a>
+        <a class="site-nav__link" href="#pemesanan">Pesan</a>
+        <a class="site-nav__link" href="#hasil">Ringkasan</a>
+      </nav>
+    </div>
+
+    <div class="site-header__hero-content">
+      <p class="site-header__tagline">
+        <strong>Escape the Ordinary:</strong> Koleksi Eksklusif 3 Vila Keluarga di Puncak, Bogor.<br>
+        Nikmati momen kebersamaan yang hangat dan privasi terbaik di tengah sejuknya alam pegunungan.
+      </p>
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- DAFTAR VILA -->
+    <section class="section" id="daftar-vila">
+      <h2 class="section__title">Pilihan Vila</h2>
+
+      <label class="search" for="cari-vila">
+        <span class="search__label">Cari vila</span>
+        <input
+          class="search__input"
+          type="search"
+          id="cari-vila"
+          placeholder="Cari nama, lokasi, atau fasilitas..."
+        >
+      </label>
+
+      <div class="villa-grid" id="villa-grid"></div>
+
+      <p class="message message--info" id="pesan-kosong" hidden>
+        Tidak ada vila yang cocok dengan kata kunci.
+        Coba kata lain, misalnya "kolam".
+      </p>
+    </section>
+
+    <!-- FORM PEMESANAN -->
+    <section class="section" id="pemesanan">
+      <h2 class="section__title">Form Pemesanan</h2>
+
+      <form class="booking-form" id="form-pesan" novalidate>
+
+        <div class="booking-form__field">
+          <label class="booking-form__label" for="nama">
+            Nama tamu
+          </label>
+          <input
+            class="booking-form__input"
+            type="text"
+            id="nama"
+            name="nama"
+            placeholder="Masukkan nama lengkap"
+            autocomplete="name"
+          >
+        </div>
+
+        <div class="booking-form__field">
+          <label class="booking-form__label" for="pilih-vila">
+            Pilihan vila
+          </label>
+          <select
+            class="booking-form__input"
+            id="pilih-vila"
+            name="vila"
+          ></select>
+        </div>
+
+        <div class="booking-form__field">
+          <label class="booking-form__label" for="checkin">
+            Tanggal check-in
+          </label>
+          <input
+            class="booking-form__input"
+            type="date"
+            id="checkin"
+            name="checkin"
+          >
+        </div>
+
+        <div class="booking-form__field">
+          <label class="booking-form__label" for="checkout">
+            Tanggal check-out
+          </label>
+          <input
+            class="booking-form__input"
+            type="date"
+            id="checkout"
+            name="checkout"
+          >
+        </div>
+
+        <div class="booking-form__field">
+          <label class="booking-form__label" for="tamu">
+            Jumlah tamu (1–10)
+          </label>
+          <input
+            class="booking-form__input"
+            type="number"
+            id="tamu"
+            name="tamu"
+            min="1"
+            max="10"
+            value="2"
+          >
+        </div>
+
+        <p
+          class="message message--error booking-form__error"
+          id="pesan-error"
+          role="alert"
+          hidden
+        ></p>
+
+        <div class="booking-form__actions">
+          <button
+            class="button button--secondary"
+            type="button"
+            id="tombol-cek"
+          >
+            Cek Ketersediaan
+          </button>
+
+          <button class="button button--primary" type="submit">
+            Pesan Sekarang
+          </button>
+        </div>
+
+      </form>
+    </section>
+
+    <!-- RINGKASAN -->
+    <section class="section" id="hasil">
+      <h2 class="section__title">Ringkasan Biaya</h2>
+
+      <article class="summary" id="ringkasan">
+        <h3 class="summary__title">Perkiraan Total</h3>
+        <p class="summary__text" id="teks-ringkasan">
+          Isi tanggal, jumlah tamu, dan pilih vila.
+          Total biaya akan muncul di sini.
+        </p>
+      </article>
+
+      <article class="summary summary--orders">
+        <h3 class="summary__title">Pesanan Tersimpan</h3>
+
+        <ul class="order-list" id="daftar-pesanan"></ul>
+
+        <p class="summary__text" id="pesanan-kosong">
+          Belum ada pesanan.
+        </p>
+      </article>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <h2 class="site-footer__title">Hubungi Pemilik</h2>
+
+    <p class="site-footer__text">
+      Misykatul Fazriyah , Puncak, Kabupaten Bogor<br>
+      WhatsApp: 0812-1234-3412<br>
+      Surel: misyka@vilapermai.example
+    </p>
+
+    <p class="site-footer__copy">
+      Vila Permai. Dibuat untuk UTS Teknologi Web.
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

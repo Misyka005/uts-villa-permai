@@ -1,0 +1,425 @@
+/* =================================
+   VILA PERMAI - SOFT VINTAGE THEME
+================================= */
+
+:root {
+  --hijau-pinus: #849765;
+  --hijau-tua: #596d45;
+  --kabut: #e8edcf;
+  --putih: #fffdf1;
+  --abu: #777b60;
+  --kuning: #d8c98d;
+  --merah: #d47c69;
+  --garis: #d5d9b9;
+  --cream: #f5f0d5;
+  --peach: #f5dfd5;
+}
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--hijau-tua);
+  background: var(--kabut);
+}
+
+/* HEADER */
+
+.site-header {
+  padding: 24px 20px 32px;
+  color: var(--putih);
+  background: linear-gradient(
+    150deg,
+    var(--hijau-tua),
+    var(--hijau-pinus)
+  );
+  border-bottom: 6px solid var(--kuning);
+  animation: turun 0.7s ease-out;
+}
+
+.site-header__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.site-header__title {
+  margin: 0;
+  font-size: 2.2rem;
+  letter-spacing: 0.5px;
+}
+
+.site-header__tagline {
+  max-width: 960px;
+  margin: 12px auto 0;
+  font-size: 1.05rem;
+}
+
+/* NAVIGATION */
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.site-nav__link {
+  color: var(--putih);
+  text-decoration: none;
+  padding: 6px 4px;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.25s;
+}
+
+.site-nav__link:hover {
+  border-bottom-color: var(--kuning);
+}
+
+/* MAIN */
+
+.main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 24px 20px;
+}
+
+.section {
+  margin-bottom: 40px;
+}
+
+.section__title {
+  margin: 0 0 16px;
+  font-size: 1.6rem;
+  color: var(--hijau-tua);
+}
+
+/* SEARCH */
+
+.search {
+  display: block;
+  margin-bottom: 16px;
+}
+
+.search__label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.search__input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 2px solid var(--garis);
+  border-radius: 8px;
+  font-size: 1rem;
+  background: var(--putih);
+  color: var(--hijau-tua);
+}
+
+/* VILLA CARDS */
+
+.villa-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.villa-card {
+  padding: 20px;
+  background: var(--putih);
+  border: 1px solid var(--garis);
+  border-left: 6px solid var(--hijau-pinus);
+  border-radius: 12px;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.villa-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(89, 109, 69, 0.15);
+}
+
+.villa-card__name {
+  margin: 0 0 4px;
+  font-size: 1.3rem;
+}
+
+.villa-card__meta {
+  margin: 0;
+  color: var(--abu);
+  font-size: 0.95rem;
+}
+
+.villa-card__price {
+  margin: 12px 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--hijau-tua);
+}
+
+.villa-card__facilities {
+  margin: 0 0 12px;
+  padding-left: 18px;
+  font-size: 0.95rem;
+}
+
+.villa-card__status {
+  display: inline-block;
+  padding: 3px 12px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.villa-card__status--ready {
+  background: #e3ebcf;
+  color: #596d45;
+}
+
+.villa-card__status--full {
+  background: var(--peach);
+  color: #b85e4d;
+}
+
+/* BOOKING FORM */
+
+.booking-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px 20px;
+  padding: 24px;
+  background: var(--putih);
+  border: 1px solid var(--garis);
+  border-radius: 12px;
+}
+
+.booking-form__field {
+  min-width: 0;
+}
+
+.booking-form__label {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+.booking-form__input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 2px solid var(--garis);
+  border-radius: 8px;
+  font-size: 1rem;
+  background: var(--putih);
+  color: var(--hijau-tua);
+  transition: border-color 0.2s;
+}
+
+.booking-form__input:focus,
+.search__input:focus {
+  outline: none;
+  border-color: var(--hijau-pinus);
+}
+
+.booking-form__error,
+.booking-form__actions {
+  grid-column: 1 / -1;
+}
+
+.booking-form__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* BUTTONS */
+
+.button {
+  padding: 12px 22px;
+  border: 2px solid var(--hijau-pinus);
+  border-radius: 9px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.25s, color 0.25s, transform 0.15s;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.button--primary {
+  background: var(--hijau-pinus);
+  color: white;
+}
+
+.button--primary:hover {
+  background: var(--hijau-tua);
+}
+
+.button--secondary {
+  background: var(--cream);
+  color: var(--hijau-tua);
+}
+
+.button--secondary:hover {
+  background: var(--hijau-pinus);
+  color: white;
+}
+
+/* MESSAGES */
+
+.message {
+  margin: 0;
+  padding: 10px 14px;
+  border-radius: 8px;
+}
+
+.message--error {
+  background: var(--peach);
+  color: #b85e4d;
+  border: 1px solid var(--merah);
+}
+
+.message--info {
+  background: var(--cream);
+  border: 1px solid var(--kuning);
+}
+
+.message[hidden] {
+  display: none;
+}
+
+/* SUMMARY */
+
+.summary {
+  padding: 20px;
+  margin-bottom: 16px;
+  background: var(--putih);
+  border: 1px solid var(--garis);
+  border-radius: 12px;
+}
+
+.summary__title {
+  margin: 0 0 8px;
+  font-size: 1.2rem;
+}
+
+.summary__text {
+  margin: 0;
+}
+
+.summary--updated {
+  animation: sorot 0.9s ease-out;
+}
+
+.order-list {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.order-list__item {
+  margin-bottom: 8px;
+}
+
+/* FOOTER */
+
+.site-footer {
+  padding: 28px 20px;
+  text-align: center;
+  color: var(--putih);
+  background: var(--hijau-tua);
+  border-top: 5px solid var(--kuning);
+}
+
+.site-footer__title {
+  margin: 0 0 8px;
+  font-size: 1.3rem;
+}
+
+.site-footer__text {
+  margin: 0 0 12px;
+}
+
+.site-footer__copy {
+  margin: 0;
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+/* ANIMATION */
+
+@keyframes turun {
+  from {
+    opacity: 0;
+    transform: translateY(-16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes sorot {
+  from {
+    background: var(--cream);
+  }
+
+  to {
+    background: var(--putih);
+  }
+}
+
+/* TABLET */
+
+@media (max-width: 768px) {
+  .villa-grid,
+  .booking-form {
+    grid-template-columns: 1fr;
+  }
+
+  .site-header__title {
+    font-size: 1.8rem;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 480px) {
+  .main {
+    padding: 16px 12px;
+  }
+
+  .booking-form {
+    padding: 16px;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  .site-nav {
+    gap: 10px;
+    font-size: 0.9rem;
+  }
+}
+
+/* REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
