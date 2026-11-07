@@ -1,8 +1,8 @@
 # Vila Permai – Aplikasi Pemesanan Vila
 
-**Nama:** (Misykatul Fazriyah)
-**NIM:** (24011130446)
-**Repository:** uts-vila-permai-NIM
+**Nama:** Misykatul Fazriyah
+**NIM:** 24011130446
+**Repository:** uts-vila-permai-24011130446
 
 ## Deskripsi
 Halaman web statis untuk calon tamu Vila Permai di Puncak, Bogor. Tamu bisa melihat tiga vila, mencari vila, melihat total biaya otomatis, lalu mengirim pesanan. Tanpa server dan tanpa basis data.
@@ -25,4 +25,12 @@ Halaman web statis untuk calon tamu Vila Permai di Puncak, Bogor. Tamu bisa meli
 - Belum ada kalender visual untuk melihat tanggal terisi.
 
 ## Tangkapan layar
-![Tangkapan layar halaman](screenshot.png)
+
+### 1. Tampilan Desktop
+![Tangkapan Layar Desktop](screenshots/ss-desktop.png)
+
+### 2. Tampilan Mobile
+![Tangkapan Layar Mobile](screenshots/ss-mobile.png)
+
+### 3. Riwayat Commit GitHub
+![Riwayat Commit](screenshots/ss-commit-github.png)
